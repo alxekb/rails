@@ -1,3 +1,12 @@
+*   Rollback transactions when the block returns earlier than expected.
+
+    Before this change, when a transaction block returned early, the transaction would be committed.
+
+    The problem is that timeouts triggered inside the transaction block was also making the incomplete transaction
+    to be committed, so in order to avoid this mistake, the transaction block is rolled back.
+
+    *Rafael Mendonça França*
+
 *   Remove deprecated support to pass a column to `type_cast`.
 
     *Rafael Mendonça França*
