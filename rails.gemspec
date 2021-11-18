@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-version = File.read(File.expand_path("RAILS_VERSION", __dir__)).strip
+version = File.read(File.expand_path("RAILS_VERSION_PATCH", __dir__)).strip
 
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
@@ -21,11 +21,11 @@ Gem::Specification.new do |s|
   s.files = ["README.md"]
 
   s.metadata = {
-    "bug_tracker_uri"   => "https://github.com/rails/rails/issues",
-    "changelog_uri"     => "https://github.com/rails/rails/releases/tag/v#{version}",
+    "bug_tracker_uri"   => "https://github.com/alxekb/rails/issues",
+    "changelog_uri"     => "https://github.com/alxekb/rails/releases/tag/v#{version}",
     "documentation_uri" => "https://api.rubyonrails.org/v#{version}/",
     "mailing_list_uri"  => "https://discuss.rubyonrails.org/c/rubyonrails-talk",
-    "source_code_uri"   => "https://github.com/rails/rails/tree/v#{version}",
+    "source_code_uri"   => "https://github.com/alxekb/rails/tree/v#{version}",
     "rubygems_mfa_required" => "true",
   }
 
