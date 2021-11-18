@@ -215,9 +215,11 @@ module ActiveRecord
             reflection.check_validity!
             reflection.check_eager_loadable!
 
-            if reflection.polymorphic?
-              raise EagerLoadPolymorphicError.new(reflection)
-            end
+          if reflection.polymorphic?
+            raise EagerLoadPolymorphicError, reflection if reflection.options[:class_name].nil?
+
+            return JoinAssociation.new(reflection, build(right, reflection.options[:class_name]))
+          end
 
             JoinAssociation.new(reflection, build(right, reflection.klass))
           end
