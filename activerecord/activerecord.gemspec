@@ -35,6 +35,6 @@ Gem::Specification.new do |s|
   # NOTE: Please read our dependency guidelines before updating versions:
   # https://edgeguides.rubyonrails.org/security.html#dependency-management-and-cves
 
-  s.add_dependency "activesupport", version
-  s.add_dependency "activemodel",   version
+  # s.add_dependency "activesupport", version
+  # s.add_dependency "activemodel",   version
 end
